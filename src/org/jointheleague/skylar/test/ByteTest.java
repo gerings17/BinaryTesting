@@ -1,0 +1,27 @@
+package org.jointheleague.skylar.test;
+
+public class ByteTest{
+
+    public static void main(String[] args){
+	//byte n = (byte) 200;
+	//System.out.println(n);
+	byte[]tester = {(byte)200, 30,-100};
+	readSignedByte(tester);
+	readUnSignedByte(tester);
+    }
+ 
+   public static void readSignedByte(byte[] bytes){
+	assert bytes != null && bytes.length >=1;
+	for(int i =0; i<bytes.length;i++){
+	    int n = (int)bytes[i];
+	    System.out.println(n);
+	}
+    }
+    public static void readUnSignedByte(byte[] bytes){
+	assert bytes != null && bytes.length >=1;
+	for(int i =0; i<bytes.length;i++){
+            int n = (int)bytes[i];
+	    System.out.println(n & 0xFF);
+	}
+    }
+}
